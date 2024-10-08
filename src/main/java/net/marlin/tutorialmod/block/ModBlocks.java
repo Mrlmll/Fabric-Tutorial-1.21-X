@@ -2,6 +2,7 @@ package net.marlin.tutorialmod.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.marlin.tutorialmod.TutorialMod;
+import net.marlin.tutorialmod.block.custom.MagicBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
@@ -32,6 +33,10 @@ public class ModBlocks {
                     .strength(4f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.DEEPSLATE)));
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            new MagicBlock(AbstractBlock.Settings.create()
+                    .strength(1f)
+                    .requiresTool()));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
